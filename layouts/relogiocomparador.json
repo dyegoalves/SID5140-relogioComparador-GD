@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 1.330000000000001
+    "zoomFactor": 0.9300000000000008
   },
   "objectsGroups": [
     {
@@ -179,7 +179,7 @@
       "width": 25,
       "x": 967,
       "y": 311,
-      "zOrder": 6,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -196,6 +196,54 @@
       "x": 1081,
       "y": 949,
       "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 150,
+      "layer": "",
+      "locked": false,
+      "name": "relogioVolta",
+      "persistentUuid": "c128a803-3b69-4e47-a069-7f31565a24d7",
+      "width": 150,
+      "x": 801,
+      "y": 202,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 62.400001525878906,
+      "layer": "",
+      "locked": false,
+      "name": "ponteiroMarkVolta",
+      "persistentUuid": "1991c8dd-d01c-452c-9cb0-30e4d976022f",
+      "width": 6,
+      "x": 876,
+      "y": 277,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 36,
+      "layer": "",
+      "locked": false,
+      "name": "setaBot",
+      "persistentUuid": "f0279cfc-a38e-4c7e-86ee-0e30ab659abb",
+      "width": 90,
+      "x": 974,
+      "y": 1002,
+      "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -253,6 +301,8 @@
           "type": "DraggableBehavior::Draggable"
         },
         {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 1500,
           "canGrabPlatforms": false,
           "deceleration": 1500,
@@ -263,26 +313,24 @@
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 700,
           "maxSpeed": 250,
-          "name": "PlatformerObject",
           "roundCoordinates": false,
           "slopeMaxAngle": 60,
-          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "xGrabTolerance": 10,
           "yGrabOffset": 0
         }
       ],
       "animations": [
         {
-          "name": "",
+          "name": "PontaDeMedicao",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "PontaDeMedicao.png",
+                  "image": "PontaDeMedicao-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -350,10 +398,10 @@
       "variables": [],
       "behaviors": [
         {
-          "canBeGrabbed": false,
           "name": "Platform",
-          "platformType": "NormalPlatform",
           "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
           "yGrabOffset": 0
         }
       ],
@@ -397,10 +445,10 @@
       "variables": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -426,6 +474,45 @@
                     "name": "centre",
                     "x": 0,
                     "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ponteiroMarkVolta",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "ponteiro.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 50,
+                    "y": 1218
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 50,
+                    "y": 1218
                   },
                   "customCollisionMask": []
                 }
@@ -511,6 +598,84 @@
         "g": 18,
         "r": 36
       }
+    },
+    {
+      "name": "relogioVolta",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "RelogioVolta5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "setaBot",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "setaBot.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -552,6 +717,18 @@
                 "ponteiroMarcadoePrincipal",
                 "=",
                 "-(floor((pontaMedicao.Y())-601)*1.8)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "ponteiroMarkVolta",
+                "=",
+                "(floor((pontaMedicao.Y())-601)*0.18)"
               ],
               "subInstructions": []
             }

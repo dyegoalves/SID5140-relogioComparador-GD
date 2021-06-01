@@ -40,15 +40,6 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "PontaDeMedicao.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "PontaDeMedicao.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "relogioComparadorPrincpal.png",
         "kind": "image",
         "metadata": "",
@@ -91,6 +82,33 @@
         "name": "ponteiro.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PontaDeMedicao-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PontaDeMedicao-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "RelogioVolta5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "RelogioVolta5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "setaBot.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "setaBot.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
