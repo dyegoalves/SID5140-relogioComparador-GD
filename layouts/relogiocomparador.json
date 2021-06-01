@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.9300000000000008
+    "zoomFactor": 0.4500000000000004
   },
   "objectsGroups": [
     {
@@ -686,7 +686,7 @@
       "creationTime": 0,
       "disabled": false,
       "folded": false,
-      "name": "MEDICAO , MOVE PONTEIRO PRINCIPAL",
+      "name": "MEDICAO , MOVE PONTEIRO PRINCIPAL  E VOLTA",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
