@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.32999999999999985
+    "zoomFactor": 0.35000000000000003
   },
   "objectsGroups": [
     {
@@ -38,7 +38,13 @@
       ]
     }
   ],
-  "variables": [],
+  "variables": [
+    {
+      "name": "toquelimite",
+      "type": "string",
+      "value": "0"
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -51,7 +57,7 @@
       "width": 600,
       "x": 667,
       "y": 11,
-      "zOrder": 2,
+      "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
@@ -108,7 +114,7 @@
       "persistentUuid": "3c3ea902-405a-4cf7-b4e5-81fcbe6e7ee3",
       "width": 70,
       "x": 934,
-      "y": 612,
+      "y": 610,
       "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
@@ -172,7 +178,7 @@
       "persistentUuid": "7597c862-ec6e-4002-84e5-8fd407620635",
       "width": 1935,
       "x": 1,
-      "y": 1001.5,
+      "y": 1002.5,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -188,7 +194,7 @@
       "persistentUuid": "492d2987-acd9-46eb-9528-ae64b2f6e496",
       "width": 2043,
       "x": 0,
-      "y": -594,
+      "y": -593,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -219,8 +225,8 @@
       "name": "valMedidoMMtxt",
       "persistentUuid": "3f8f1f31-1149-4b0a-8a9e-11ad1cdbd761",
       "width": 0,
-      "x": 1081,
-      "y": 949,
+      "x": 1487,
+      "y": 412,
       "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
@@ -283,9 +289,25 @@
       "name": "girarOk",
       "persistentUuid": "b3273a8a-d9ee-4581-b89a-91f8a029f56f",
       "width": 0,
-      "x": 1147,
-      "y": 610,
+      "x": 1458,
+      "y": 296,
       "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "MedicaoReloGio",
+      "persistentUuid": "4688ff2b-2dab-4304-985d-75017f969806",
+      "width": 0,
+      "x": 1458,
+      "y": 378,
+      "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -343,13 +365,13 @@
           "type": "DraggableBehavior::Draggable"
         },
         {
+          "ignoreDefaultControls": true,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 1500,
           "canGrabPlatforms": false,
           "deceleration": 1500,
           "gravity": 0,
-          "ignoreDefaultControls": false,
           "jumpSpeed": 600,
           "jumpSustainTime": 0.2,
           "ladderClimbingSpeed": 150,
@@ -412,6 +434,53 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "basePinoMedicao.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "blockPP",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "blockPonta",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "blockPonta-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -623,7 +692,26 @@
       }
     },
     {
-      "bold": false,
+      "bold": true,
+      "italic": false,
+      "name": "MedicaoReloGio",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Medição do Relógio",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 74,
+        "g": 74,
+        "r": 74
+      }
+    },
+    {
+      "bold": true,
       "italic": false,
       "name": "girarOk",
       "smoothed": true,
@@ -636,28 +724,9 @@
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
-      }
-    },
-    {
-      "bold": false,
-      "italic": false,
-      "name": "debug",
-      "smoothed": true,
-      "tags": "",
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "behaviors": [],
-      "string": "Text",
-      "font": "",
-      "characterSize": 20,
-      "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 74,
+        "g": 74,
+        "r": 74
       }
     },
     {
@@ -677,6 +746,25 @@
         "b": 241,
         "g": 18,
         "r": 36
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "debug",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Text",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
       }
     },
     {
@@ -784,7 +872,7 @@
               "parameters": [
                 "valMedidoMMtxt",
                 "=",
-                "SubStr(ToString((((floor(pontaMedicao.Y())-601)*1.8)/(-3.6))/100),0,5) + \" mm\""
+                "SubStr(ToString((((floor(pontaMedicao.Y())-602)*1.8)/(-3.6))/100),0,5) + \" mm\""
               ],
               "subInstructions": []
             },
@@ -796,7 +884,7 @@
               "parameters": [
                 "ponteiroMarcadoePrincipal",
                 "=",
-                "-(floor((pontaMedicao.Y())-601)*1.8)"
+                "-(floor((pontaMedicao.Y())-602)*1.8)"
               ],
               "subInstructions": []
             },
@@ -808,7 +896,7 @@
               "parameters": [
                 "ponteiroMarkVolta",
                 "=",
-                "(floor((pontaMedicao.Y())-601)*0.18)"
+                "(floor((pontaMedicao.Y())-602)*0.18)"
               ],
               "subInstructions": []
             }
@@ -817,14 +905,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": []
     },
     {
       "colorB": 228,
@@ -1025,23 +1105,137 @@
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "debug",
-                "=",
-                "ToString(relogioPrincipal.Variable(targetAngle))"
-              ],
-              "subInstructions": []
             }
           ],
           "events": []
         }
       ]
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "FIXED MOUSE DRAG FORA DA TELA",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "MouseX"
+          },
+          "parameters": [
+            "",
+            "<",
+            "900",
+            "\"\"",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "pontaMedicao",
+            "Draggable",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Arreter"
+          },
+          "parameters": [
+            "pontaMedicao"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "MouseX"
+          },
+          "parameters": [
+            "",
+            ">=",
+            "1100",
+            "\"\"",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "pontaMedicao",
+            "Draggable",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Arreter"
+          },
+          "parameters": [
+            "pontaMedicao"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "pontaMedicao",
+            "Draggable",
+            "yes"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     }
   ],
   "layers": [
