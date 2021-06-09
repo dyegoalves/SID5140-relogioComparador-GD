@@ -866,17 +866,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "SourisSurObjet"
               },
               "parameters": [
@@ -884,6 +873,17 @@
                 "",
                 "",
                 ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
               ],
               "subInstructions": []
             },
