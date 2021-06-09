@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.4500000000000004
+    "zoomFactor": 0.32999999999999985
   },
   "objectsGroups": [
     {
@@ -49,21 +49,36 @@
       "name": "relogioPrincipal",
       "persistentUuid": "a84b50f9-52ac-470a-89b2-7ba1ef769e6a",
       "width": 600,
-      "x": 967,
-      "y": 311,
+      "x": 667,
+      "y": 11,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
         {
-          "name": "dirX",
-          "type": "string",
-          "value": "0"
+          "name": "dx",
+          "type": "number",
+          "value": 0
         },
         {
-          "name": "dirY",
-          "type": "string",
-          "value": "0"
+          "name": "dy",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "targetAngle",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "mx",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "moy",
+          "type": "number",
+          "value": 0
         }
       ]
     },
@@ -265,27 +280,11 @@
       "height": 0,
       "layer": "",
       "locked": false,
-      "name": "debug",
-      "persistentUuid": "b95510a3-0840-4349-8d96-d51167fe926d",
+      "name": "girarOk",
+      "persistentUuid": "b3273a8a-d9ee-4581-b89a-91f8a029f56f",
       "width": 0,
-      "x": 471,
-      "y": 454,
-      "zOrder": 13,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "debug2",
-      "persistentUuid": "4480f3c0-e897-4743-b973-ac55316b7b74",
-      "width": 0,
-      "x": 473,
-      "y": 563,
+      "x": 1147,
+      "y": 610,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -315,14 +314,14 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 960,
-                    "y": 956
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
                     "name": "centre",
-                    "x": 920,
-                    "y": 971.09375
+                    "x": 960,
+                    "y": 961.09375
                   },
                   "customCollisionMask": []
                 }
@@ -574,27 +573,27 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "ponteiro",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "ponteiro.png",
+                  "image": "ponteiro2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 50,
-                    "y": 1218
+                    "y": 1200
                   },
                   "centerPoint": {
                     "automatic": false,
                     "name": "centre",
                     "x": 50,
-                    "y": 1218
+                    "y": 1200
                   },
                   "customCollisionMask": []
                 }
@@ -615,6 +614,25 @@
       "variables": [],
       "behaviors": [],
       "string": "Text",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "girarOk",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Girar Relogio ? : [  ]",
       "font": "",
       "characterSize": 20,
       "color": {
@@ -809,6 +827,19 @@
       "events": []
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "GIRO MOUSE RELOGIO PRINCIPAL",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
+    },
+    {
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
@@ -835,11 +866,134 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MouseButtonPressed"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
                 "",
                 "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "relogioPrincipal",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ToggleObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "girarOk",
+                "troca"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "girarOk",
+                    "troca",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "girarOk",
+                    "=",
+                    "\"Girar Relogio ? : [ ]\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "girarOk",
+                    "troca",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "girarOk",
+                    "=",
+                    "\"Girar Relogio ? : [X]\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "girarOk",
+                "troca",
+                "True"
               ],
               "subInstructions": []
             },
@@ -861,11 +1015,13 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Rotate"
+                "value": "RotateTowardPosition"
               },
               "parameters": [
                 "relogioPrincipal",
-                "(atan2(MouseY(),MouseX())*2)",
+                "MouseX()",
+                "MouseY()",
+                "0",
                 ""
               ],
               "subInstructions": []
@@ -878,7 +1034,7 @@
               "parameters": [
                 "debug",
                 "=",
-                "ToString(atan2(MouseY(), MouseX()))"
+                "ToString(relogioPrincipal.Variable(targetAngle))"
               ],
               "subInstructions": []
             }
@@ -886,14 +1042,6 @@
           "events": []
         }
       ]
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": []
     }
   ],
   "layers": [
