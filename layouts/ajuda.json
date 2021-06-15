@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.7999999999999998
+    "zoomFactor": 0.62
   },
   "objectsGroups": [],
   "variables": [],
@@ -86,7 +86,7 @@
       "persistentUuid": "3af3e85e-dba7-4b0e-bed6-484df894f1b9",
       "width": 0,
       "x": 80,
-      "y": 540,
+      "y": 559,
       "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
@@ -102,7 +102,7 @@
       "persistentUuid": "2d26d595-6d93-4ee1-8917-6fcad2b253a6",
       "width": 0,
       "x": 80,
-      "y": 603,
+      "y": 613,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -241,7 +241,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "1.1.\tPara executar esta funcionalidade, primeiro clique e segure o botão esquerdo do mouse sobre a PONTA DE CONTATO e arraste-a para sentido da medição e posição desejada, isso irá movimentar o ponteiro principal, gerando assim medição, em caso de dúvidas favor consultar o professor.\n\n1.2.\tObserve que a medição é gerada de acordo com movimento da PONTA DE CONTATO, no campo em azul.\n\n1.3.\tUtilize todas a regras de medição de um Relógio comparador, regras essas orientadas em aulas pelo seu professor.\n",
+      "string": "1.1. Para executar esta funcionalidade clique e segure com o botão esquerdo do mouse sobre a PONTA DE CONTATO e arraste-a para o sentido da medição e posição desejada, isso irá movimentar o ponteiro principal.\n\n1.2. A medição é gerada de acordo com movimento da PONTA DE CONTATO, e apresentada no campo em azul.\n\n1.3. Utilize as regras de medição de um Relógio comparador de acordo com a orientações dadas em aula. Em caso de dúvidas, pergunte ao Professor.",
       "font": "",
       "characterSize": 25,
       "color": {
@@ -298,7 +298,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "2 - Relógio principal e o seu GIRO",
+      "string": "2 - Giro do Relógio principal",
       "font": "",
       "characterSize": 35,
       "color": {
@@ -317,7 +317,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "2.1.\tPara executar o Giro do Relógio principal de medição, clique sobre o mesmo com botão esquerdo do mouse e o arraste-o até a posição desejada.\n\n2.2.\tA opção \"Girar Relógio? [  ]\", será marcada como \"Girar Relógio? [X]\", isso indica que o Giro do Relógio Principal está liberado para ser feito.\n",
+      "string": "2.1. Para executar o Giro do Relógio principal clique sobre o mesmo com botão esquerdo do mouse e o arraste-o até a posição desejada.\n\n2.2. A opção \"Girar Relógio? [ ]\", será marcada como \"Girar Relógio? [X]\", isso indica que o Giro do Relógio Principal está liberado para ser feito.",
       "font": "",
       "characterSize": 25,
       "color": {
@@ -374,7 +374,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "3.1.\tO Relógio contador de voltas, serve para contar as voltas, a cada 1mm medido é computado 1 volta no mesmo.",
+      "string": "3.1. O Relógio contador de voltas serve para contar as voltas, sendo que a cada 1mm medido é computado 1 volta no mesmo.",
       "font": "",
       "characterSize": 25,
       "color": {
