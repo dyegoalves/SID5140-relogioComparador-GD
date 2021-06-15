@@ -1381,7 +1381,7 @@
       "creationTime": 0,
       "disabled": false,
       "folded": false,
-      "name": "BOTAO AJUDA",
+      "name": "BOTAO AJUDA    ",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
